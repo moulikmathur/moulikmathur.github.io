@@ -97,10 +97,10 @@
   .work .src{display:block;font-size:14px;color:var(--muted);margin-top:6px}
   .work .why{display:block;font-size:15px;color:var(--ink);opacity:.82;margin-top:6px;line-height:1.5}
 
-  .archive-cta{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:28px;padding:28px 32px;background:#2546D9;color:#fff;border-radius:14px}
+  .archive-cta{margin-top:32px;padding-top:28px;border-top:1px solid var(--rule)}
   .archive-cta p{margin:0;font-family:var(--serif);font-size:24px;line-height:1.25;max-width:24em}
-  .archive-cta a{background:#fff;color:#16181D;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:999px;white-space:nowrap}
-  .archive-cta a:hover{background:#DCE3FF}
+  .archive-cta a{display:inline-block;background:var(--pencil);color:#fff;text-decoration:none;font-weight:600;padding:13px 24px;border-radius:999px}
+  .archive-cta a:hover{background:var(--ink);color:var(--paper)}
   .archive-cta a:focus-visible{outline-color:#fff}
 
   /* Career timeline */
@@ -162,8 +162,6 @@
     .work{grid-template-columns:1fr;gap:22px}
     .work .hl{font-size:19px}
     .reels{grid-template-columns:1fr}
-    .archive-cta{padding:22px;border-radius:12px}
-    .archive-cta p{font-size:20px}
     .facts{padding:18px;grid-template-columns:1fr;gap:4px}
     .facts dd{margin-bottom:10px}
     footer{margin-top:72px}
@@ -188,7 +186,7 @@
   <section class="hero" aria-labelledby="hero-title">
     <div>
       <h1 id="hero-title">Journalist in London.</h1>
-      <p class="intro">I'm <strong>Moulik Mathur</strong>. For four years I've written news, reviews, interviews and investigations for IGN India, India Today Gaming, Destructoid and How-To Geek, and reported on housing and local life in Sheffield during my MA.</p>
+      <p class="intro">I'm <strong>Moulik</strong>, a journalist based in London. I've spent four years writing news, reviews and interviews for IGN India, India Today Gaming, Destructoid and How-To Geek. During my MA at Sheffield, I reported on housing and local life in the city.</p>
       <div class="actions">
         <a class="btn primary" href="mailto:moulikmathur@gmail.com">Email me</a>
         <a class="btn ghost" href="archive.html">Browse all 371 articles</a>
@@ -215,13 +213,12 @@
 <main id="work">
   <section class="block" aria-labelledby="work-title">
     <div class="wrap">
-      <div class="split intro-row">
+      <div class="intro-row">
         <h2 class="title" id="work-title">Selected work</h2>
-        <p>A cross-section of what I do: finding stories in public records, getting time with the people who make games, reviewing games and hardware, and writing guides people search for.</p>
       </div>
 
       <div class="shelf split">
-        <h3>News and investigations<small>Public records, local reporting and breaking news.</small></h3>
+        <h3>News and investigations</h3>
         <ul class="work">
           <li><a href="https://sheffieldwire.co.uk/index.php/2025/05/14/city-councils-bill-revealed-for-housing-sheffields-vulnerable-people/" target="_blank" rel="noopener"><span class="hl">City council's bill revealed for housing Sheffield's vulnerable people</span><span class="src">Sheffield Wire, May 2025</span><span class="why">An FOI request showed the council spent nearly £135m on exempt accommodation over five years.</span></a></li>
           <li><a href="https://sheffieldwire.co.uk/index.php/2025/05/16/there-was-nowhere-else-for-me-teenager-on-social-housings-role-to-lift-him-from-homelessness/" target="_blank" rel="noopener"><span class="hl">"There was nowhere else for me": Teenager on social housing's role to lift him from homelessness</span><span class="src">Sheffield Wire, May 2025</span><span class="why">The human side of the FOI story, told by a 19-year-old who fled Yemen.</span></a></li>
@@ -231,7 +228,7 @@
       </div>
 
       <div class="shelf split">
-        <h3>Interviews and exclusives<small>Developers, executives and esports teams.</small></h3>
+        <h3>Interviews and exclusives</h3>
         <ul class="work">
           <li><a href="https://in.ign.com/apex-legends/190904/news/apex-legends-developer-teases-laid-out-storylines-in-future-but-rules-out-campaign-mode-in-the-battl" target="_blank" rel="noopener"><span class="hl">Apex Legends dev teases storylines for future but rules out campaign</span><span class="src">IGN India</span></a></li>
           <li><a href="https://www.indiatodaygaming.com/news/international/story/apex-legends-design-director-confirms-heirlooms-for-newer-characters-are-in-development-exclusive-2178" target="_blank" rel="noopener"><span class="hl">Apex Legends design director confirms heirlooms for newer characters are in development</span><span class="src">India Today Gaming, February 2023</span></a></li>
@@ -243,7 +240,7 @@
       </div>
 
       <div class="shelf split">
-        <h3>Reviews<small>Games, films and gaming hardware.</small></h3>
+        <h3>Reviews</h3>
         <ul class="work">
           <li><a href="https://in.ign.com/tekken-8/200944/review/tekken-8-review" target="_blank" rel="noopener"><span class="hl">Tekken 8 review: back to the basics of fun</span><span class="src">IGN India</span></a></li>
           <li><a href="https://in.ign.com/cyberpunk-2077-phantom-liberty/194528/review/cyberpunk-2077-phantom-liberty-ign-india-review" target="_blank" rel="noopener"><span class="hl">Cyberpunk 2077: Phantom Liberty review</span><span class="src">IGN India</span></a></li>
@@ -253,7 +250,7 @@
       </div>
 
       <div class="shelf split">
-        <h3>Features and guides<small>Long reads from the ground and search-led explainers.</small></h3>
+        <h3>Features and guides</h3>
         <ul class="work">
           <li><a href="https://sheffieldwire.co.uk/index.php/2025/03/17/people-want-action-from-policy-makers-regarding-climate-change/" target="_blank" rel="noopener"><span class="hl">"Concerned but feel powerless": Sheffield people want action from policy makers on climate change</span><span class="src">Sheffield Wire, March 2025</span></a></li>
           <li><a href="https://sheffieldwire.co.uk/index.php/2025/03/24/makers-market-2025-sheffields-independent-artisans-reflect-on-demoralising-reality-of-the-market/" target="_blank" rel="noopener"><span class="hl">Makers' Market 2025: Sheffield's independent artisans reflect on the "demoralising" reality of the market</span><span class="src">Sheffield Wire, March 2025</span></a></li>
@@ -263,17 +260,15 @@
       </div>
 
       <div class="archive-cta">
-        <p>This is a small slice. The archive lists all 371 published articles, searchable by game, company or topic.</p>
-        <a href="archive.html">Open the archive</a>
+        <a href="archive.html">See all 371 articles</a>
       </div>
     </div>
   </section>
 
   <section class="block" id="career" aria-labelledby="career-title">
     <div class="wrap">
-      <div class="split intro-row">
+      <div class="intro-row">
         <h2 class="title" id="career-title">Where I've worked</h2>
-        <p>Most recent first.</p>
       </div>
       <ol class="timeline">
         <li class="split">
@@ -335,9 +330,9 @@
 
   <section class="block" id="video" aria-labelledby="video-title">
     <div class="wrap">
-      <div class="split intro-row">
+      <div class="intro-row">
         <h2 class="title" id="video-title">Video</h2>
-        <p>I shoot, edit and voice video in Premiere Pro, a skill I picked up during my MA.</p>
+        <p>I shoot, edit and voice my own videos in Premiere Pro.</p>
       </div>
       <ul class="reels">
         <li><a href="https://www.youtube.com/watch?v=7zjbPX8flEk" target="_blank" rel="noopener"><span class="hl">The Sapiens Project by Ten24</span><span class="what">Filmed the interview, edited the piece and recorded the voice-over.</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</span></a></li>
@@ -354,8 +349,8 @@
       <h2 class="title" id="about-title">About</h2>
       <div>
         <div class="about-text">
-          <p>I've spent four years in newsrooms and digital publications, filing same-day reviews and breaking news, long-form interviews and search-driven guides. I've worked under daily deadlines, edited other people's copy, and adapted my tone across news, features and social formats.</p>
-          <p>I moved to the UK for an MA in Journalism at the University of Sheffield, and I'm now based in London, looking for a journalism, content or editorial role where clear writing on technical subjects matters.</p>
+          <p>I've worked in newsrooms for four years, mostly in games and tech. I've written daily news, reviewed games and laptops, interviewed developers, and edited other writers' copy.</p>
+          <p>I came to the UK for my MA in Journalism at the University of Sheffield. I'm now in London, looking for my next role in journalism or content.</p>
         </div>
         <dl class="facts">
           <dt>Education</dt><dd>MA Journalism, University of Sheffield<br>PG Diploma in English Journalism, IIMC<br>BA English and Spanish, University of Delhi</dd>
@@ -369,7 +364,7 @@
 
 <footer id="contact">
   <div class="wrap">
-    <h2>Have a story, a role or a deadline?</h2>
+    <h2>Get in touch</h2>
     <p class="note">Open to content writing, copywriting, SEO content, sub-editing and B2B editorial roles. Based in London on a Graduate visa, able to work for any UK employer without sponsorship.</p>
     <a class="mail" href="mailto:moulikmathur@gmail.com">moulikmathur@gmail.com</a>
     <div class="lines">
