@@ -89,14 +89,17 @@ img{display:block;max-width:100%;height:auto}
 
 /* Story cards */
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
-.card{background:var(--card);border-radius:18px;padding:1.4rem 1.5rem 1.5rem;display:flex;flex-direction:column;gap:.6rem;min-height:13.5rem;border-top:5px solid var(--c,var(--gold));transition:transform .15s,box-shadow .15s}
+.card{background:var(--card);border-radius:18px;padding:1.4rem 1.5rem 1.5rem;display:flex;flex-direction:column;gap:.6rem;min-height:13.5rem;border-top:4px solid var(--gold);transition:transform .15s,box-shadow .15s}
 .card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(14,26,43,.10)}
-.card.news{--c:var(--news)} .card.talk{--c:var(--talk)} .card.review{--c:var(--review)} .card.feature{--c:var(--feature)}
 .tag{font-size:.8125rem;color:var(--meta);font-weight:500}
 .card h3{font-family:var(--display);font-weight:600;font-size:1.3125rem;line-height:1.25;letter-spacing:-.012em;margin:0}
 .card:hover h3{color:var(--talk)}
 .card p{font-size:.875rem;line-height:1.5;color:var(--meta);margin:auto 0 0}
-.more-row{display:flex;justify-content:center;margin-top:2rem}
+.more-row{display:flex;justify-content:center;margin-top:3rem}
+.cat+.cat{padding-top:3.5rem}
+.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.sec-head .all{font-size:.9375rem;font-weight:500;color:var(--talk)}
+.sec-head .all:hover{text-decoration:underline;text-underline-offset:3px}
 .btn.navy{background:var(--navy);color:#fff}
 .btn.navy:hover{background:var(--navy-3)}
 
@@ -153,7 +156,7 @@ img{display:block;max-width:100%;height:auto}
 .foot{border-top:1px solid var(--line-dark);margin-top:3.5rem;padding-top:1.25rem;font-size:.8125rem;color:#8C9AB2}
 
 @media (max-width:980px){
-  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid,.grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}
   .videos{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:760px){
@@ -170,7 +173,8 @@ img{display:block;max-width:100%;height:auto}
   .num{padding:1.1rem 1.25rem}
   .num b{font-size:1.5rem}
   .sec{padding-top:3.5rem}
-  .grid,.jobs,.about{grid-template-columns:1fr}
+  .grid,.grid.four,.jobs,.about{grid-template-columns:1fr}
+  .cat+.cat{padding-top:2.5rem}
   .card{min-height:0}
   .job.star{grid-template-columns:1fr;gap:1rem;padding:1.6rem 1.5rem}
   .band,.contact{margin-top:3.5rem;padding-top:3.5rem}
@@ -217,91 +221,117 @@ img{display:block;max-width:100%;height:auto}
     <div class="num"><b>2,600 → 100,000</b><span>monthly views I grew at India Today Gaming</span></div>
   </div>
 
-  <section class="sec" id="stories" aria-labelledby="h-stories">
+  <section class="sec cat" id="stories" aria-labelledby="h-news">
     <div class="sec-head">
       <div>
-        <h2 id="h-stories">Selected stories</h2>
-        <p class="sub">A few I'm proud of, from investigations to exclusives.</p>
+        <h2 id="h-news">News and investigations</h2>
       </div>
-      <div class="key" aria-label="Colour key">
-        <span><i style="background:var(--news)"></i>News</span>
-        <span><i style="background:var(--talk)"></i>Interviews</span>
-        <span><i style="background:var(--review)"></i>Reviews</span>
-        <span><i style="background:var(--feature)"></i>Features and guides</span>
-      </div>
+      <a class="all" href="archive.html">All 371 articles</a>
     </div>
-
     <div class="grid">
-      <a class="card news" href="https://sheffieldwire.co.uk/index.php/2025/05/14/city-councils-bill-revealed-for-housing-sheffields-vulnerable-people/">
-        <span class="tag">Sheffield Wire, 2025 · Group FOI investigation</span>
+      <a class="card" href="https://sheffieldwire.co.uk/index.php/2025/05/14/city-councils-bill-revealed-for-housing-sheffields-vulnerable-people/">
+        <span class="tag">Sheffield Wire, 2025</span>
         <h3>City council's bill revealed for housing Sheffield's vulnerable people</h3>
-        <p>Our FOI request showed the council spent nearly £135m on exempt accommodation over five years.</p>
+        <p>A group FOI investigation found the council spent nearly £135m on exempt accommodation over five years.</p>
       </a>
-      <a class="card talk" href="https://in.ign.com/apex-legends/190904/news/apex-legends-developer-teases-laid-out-storylines-in-future-but-rules-out-campaign-mode-in-the-battl">
-        <span class="tag">IGN India, 2023 · Exclusive</span>
-        <h3>Apex Legends dev teases storylines for future but rules out campaign</h3>
-        <p>Exclusive interview with Respawn.</p>
-      </a>
-      <a class="card news" href="https://www.mirror.co.uk/news/uk-news/premature-baby-hands-size-fingertips-35172580">
-        <span class="tag">The Mirror, 2025 · News</span>
+      <a class="card" href="https://www.mirror.co.uk/news/uk-news/premature-baby-hands-size-fingertips-35172580">
+        <span class="tag">The Mirror, 2025</span>
         <h3>A baby born 15 weeks early on her mum's own neonatal ward</h3>
         <p>Written during a placement at the news agency SWNS.</p>
       </a>
-      <a class="card review" href="https://in.ign.com/tekken-8/200944/review/tekken-8-review">
-        <span class="tag">IGN India, 2024 · Review</span>
-        <h3>Tekken 8 review: back to the basics of fun</h3>
+      <a class="card" href="https://in.ign.com/policy/189943/news/indian-video-games-industry-rallies-together-as-over-40-studios-ask-government-to-separate-games-fro">
+        <span class="tag">IGN India, 2023</span>
+        <h3>Indian video games industry rallies together as over 40 studios ask government to separate games from gambling apps</h3>
       </a>
-      <a class="card talk" href="https://www.indiatodaygaming.com/news/international/story/apex-legends-design-director-confirms-heirlooms-for-newer-characters-are-in-development-exclusive-2178">
-        <span class="tag">India Today Gaming, 2023 · Exclusive</span>
+    </div>
+  </section>
+  <section class="sec cat" aria-labelledby="h-interviews">
+    <div class="sec-head">
+      <div>
+        <h2 id="h-interviews">Interviews and exclusives</h2>
+      </div>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://in.ign.com/apex-legends/190904/news/apex-legends-developer-teases-laid-out-storylines-in-future-but-rules-out-campaign-mode-in-the-battl">
+        <span class="tag">IGN India, 2023</span>
+        <h3>Apex Legends dev teases storylines for future but rules out campaign</h3>
+        <p>Exclusive interview with Respawn.</p>
+      </a>
+      <a class="card" href="https://www.indiatodaygaming.com/news/international/story/apex-legends-design-director-confirms-heirlooms-for-newer-characters-are-in-development-exclusive-2178">
+        <span class="tag">India Today Gaming, 2023</span>
         <h3>Apex Legends design director confirms heirlooms for newer characters are in development</h3>
         <p>Exclusive interview with Respawn.</p>
       </a>
-      <a class="card feature" href="https://uosjournalism.shorthandstories.com/industrys-take-on-ai-in-video-games-impact-on-jobs-rise-of-smaller-studios-and-future-of-gaming/index.html">
-        <span class="tag">University of Sheffield, 2025 · Feature</span>
+      <a class="card" href="https://in.ign.com/ea-fc-mobile/191017/news/ea-fc-mobile-producer-timo-mueller-on-first-time-gameplay-experience-optimisations-and-anticipated-r">
+        <span class="tag">IGN India, 2023</span>
+        <h3>EA FC Mobile producer Timo Mueller on first-time gameplay, optimisations and the reaction to changes</h3>
+      </a>
+      <a class="card" href="https://in.ign.com/esports/198528/interview/nba-2k-the-business-head-of-india-shares-how-the-company-plans-to-grow-the-popularity-of-its-esports">
+        <span class="tag">IGN India, 2023</span>
+        <h3>NBA 2K: the business head of India on growing its esports league</h3>
+      </a>
+      <a class="card" href="https://sheffieldwire.co.uk/index.php/2024/12/06/mexican-developer-reflects-on-gaming-journey-claims-sheffields-video-game-culture-is-hardly-evident/">
+        <span class="tag">Sheffield Wire, 2024</span>
+        <h3>Mexican developer reflects on gaming journey, claims Sheffield's video game culture is hardly "evident"</h3>
+      </a>
+      <a class="card" href="https://www.indiatodaygaming.com/news/international/story/googly-ceo-shubhodip-pal-talks-about-googly-platform-gamers-india-rising-gaming-esports-community-2099">
+        <span class="tag">India Today Gaming, 2023</span>
+        <h3>Googly CEO Shubhodip Pal on what his platform offers India's gamers and its growing esports community</h3>
+      </a>
+    </div>
+  </section>
+  <section class="sec cat" aria-labelledby="h-reviews">
+    <div class="sec-head">
+      <div>
+        <h2 id="h-reviews">Reviews</h2>
+        <p class="sub">Games and gaming laptops.</p>
+      </div>
+    </div>
+    <div class="grid four">
+      <a class="card" href="https://in.ign.com/tekken-8/200944/review/tekken-8-review">
+        <span class="tag">IGN India, 2024</span>
+        <h3>Tekken 8 review: back to the basics of fun</h3>
+      </a>
+      <a class="card" href="https://in.ign.com/cyberpunk-2077-phantom-liberty/194528/review/cyberpunk-2077-phantom-liberty-ign-india-review">
+        <span class="tag">IGN India, 2023</span>
+        <h3>Cyberpunk 2077: Phantom Liberty review</h3>
+      </a>
+      <a class="card" href="https://www.indiatodaygaming.com/news/international/story/returnal-review-2310">
+        <span class="tag">India Today Gaming, 2023</span>
+        <h3>Returnal review: a fantastic roguelike with top-notch storytelling</h3>
+      </a>
+      <a class="card" href="https://in.ign.com/lenovo-legion-slim-5i/191181/review/lenovo-legion-slim-5i-review">
+        <span class="tag">IGN India, 2023</span>
+        <h3>Lenovo Legion Slim 5i review</h3>
+        <p>Laptop review.</p>
+      </a>
+    </div>
+  </section>
+  <section class="sec cat" aria-labelledby="h-features">
+    <div class="sec-head">
+      <div>
+        <h2 id="h-features">Features and guides</h2>
+      </div>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://uosjournalism.shorthandstories.com/industrys-take-on-ai-in-video-games-impact-on-jobs-rise-of-smaller-studios-and-future-of-gaming/index.html">
+        <span class="tag">University of Sheffield, 2025</span>
         <h3>Industry's take on AI in video games: jobs, smaller studios and the future of gaming</h3>
         <p>Interviews with Scriptic's Thomas Wood and Ten24's James Busby.</p>
       </a>
-      <a class="card talk" href="https://in.ign.com/ea-fc-mobile/191017/news/ea-fc-mobile-producer-timo-mueller-on-first-time-gameplay-experience-optimisations-and-anticipated-r">
-        <span class="tag">IGN India, 2023 · Interview</span>
-        <h3>EA FC Mobile producer Timo Mueller on first-time gameplay, optimisations and the reaction to changes</h3>
-      </a>
-      <a class="card news" href="https://sheffieldwire.co.uk/index.php/2025/05/16/there-was-nowhere-else-for-me-teenager-on-social-housings-role-to-lift-him-from-homelessness/">
-        <span class="tag">Sheffield Wire, 2025 · Feature</span>
+      <a class="card" href="https://sheffieldwire.co.uk/index.php/2025/05/16/there-was-nowhere-else-for-me-teenager-on-social-housings-role-to-lift-him-from-homelessness/">
+        <span class="tag">Sheffield Wire, 2025</span>
         <h3>"There was nowhere else for me": Teenager on social housing's role to lift him from homelessness</h3>
         <p>The human side of the FOI story, told by a 19-year-old who fled Yemen.</p>
       </a>
-      <a class="card talk" href="https://in.ign.com/esports/198528/interview/nba-2k-the-business-head-of-india-shares-how-the-company-plans-to-grow-the-popularity-of-its-esports">
-        <span class="tag">IGN India, 2023 · Interview</span>
-        <h3>NBA 2K: the business head of India on growing its esports league</h3>
-      </a>
-      <a class="card review" href="https://in.ign.com/cyberpunk-2077-phantom-liberty/194528/review/cyberpunk-2077-phantom-liberty-ign-india-review">
-        <span class="tag">IGN India, 2023 · Review</span>
-        <h3>Cyberpunk 2077: Phantom Liberty review</h3>
-      </a>
-      <a class="card news" href="https://in.ign.com/policy/189943/news/indian-video-games-industry-rallies-together-as-over-40-studios-ask-government-to-separate-games-fro">
-        <span class="tag">IGN India, 2023 · News</span>
-        <h3>Indian video games industry rallies together as over 40 studios ask government to separate games from gambling apps</h3>
-      </a>
-      <a class="card feature" href="https://www.destructoid.com/no-mans-sky-how-to-get-a-sentinel-interceptor/">
-        <span class="tag">Destructoid, 2024 · Guide</span>
+      <a class="card" href="https://www.destructoid.com/no-mans-sky-how-to-get-a-sentinel-interceptor/">
+        <span class="tag">Destructoid, 2024</span>
         <h3>No Man's Sky: how to get a Sentinel Interceptor</h3>
         <p>One of 29 No Man's Sky guides and news stories I wrote that summer.</p>
       </a>
-      <a class="card review" href="https://in.ign.com/lenovo-legion-slim-5i/191181/review/lenovo-legion-slim-5i-review">
-        <span class="tag">IGN India, 2023 · Laptop review</span>
-        <h3>Lenovo Legion Slim 5i review</h3>
-      </a>
-      <a class="card review" href="https://www.indiatodaygaming.com/news/international/story/returnal-review-2310">
-        <span class="tag">India Today Gaming, 2023 · Review</span>
-        <h3>Returnal review: a fantastic roguelike with top-notch storytelling</h3>
-      </a>
-      <a class="card talk" href="https://sheffieldwire.co.uk/index.php/2024/12/06/mexican-developer-reflects-on-gaming-journey-claims-sheffields-video-game-culture-is-hardly-evident/">
-        <span class="tag">Sheffield Wire, 2024 · Interview</span>
-        <h3>Mexican developer reflects on gaming journey, claims Sheffield's video game culture is hardly "evident"</h3>
-      </a>
     </div>
-    <div class="more-row"><a class="btn navy" href="archive.html">Browse all 371 articles</a></div>
   </section>
+  <div class="more-row"><a class="btn navy" href="archive.html">Browse all 371 articles</a></div>
 
   <section class="sec" id="work" aria-labelledby="h-work">
     <div class="sec-head"><div><h2 id="h-work">Where I've worked</h2></div></div>
