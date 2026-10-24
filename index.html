@@ -1,380 +1,333 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Moulik Mathur, journalist</title>
-<meta name="description" content="Moulik Mathur is a London-based journalist with four years of news, reviews, interviews and investigations for IGN India, Destructoid, How-To Geek, India Today Gaming and Sheffield Wire.">
+<meta name="description" content="Moulik Mathur is a journalist in London. Four years of news, reviews, interviews and investigations for IGN India, India Today Gaming, Destructoid, How-To Geek and Sheffield Wire.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --paper:#F4F6F8;
-    --sheet:#FFFFFF;
-    --ink:#16181D;
-    --muted:#5B6270;
-    --rule:#D8DCE2;
-    --pencil:#2546D9;
-    --pencil-tint:#DCE3FF;
-    --serif:'Newsreader',Georgia,serif;
-    --sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
-  }
-  @media (prefers-color-scheme:dark){
-    :root{
-      --paper:#121417;
-      --sheet:#1A1D22;
-      --ink:#ECEEF1;
-      --muted:#9AA1AD;
-      --rule:#2C3038;
-      --pencil:#8CA4FF;
-      --pencil-tint:#25305A;
-    }
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-  a{color:inherit}
-  a:focus-visible{outline:2px solid var(--pencil);outline-offset:3px;border-radius:2px}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 32px}
-  .skip{position:absolute;left:-9999px}
-  .skip:focus{left:16px;top:16px;background:var(--pencil);color:#fff;padding:8px 14px;z-index:10}
-  .title{font-family:var(--serif);font-weight:500;font-size:clamp(32px,3.6vw,44px);line-height:1.08;margin:0}
+:root{
+  --paper:#FFFFFF;
+  --ink:#1B1B1B;
+  --meta:#5E5E5E;
+  --rule:#E4E4E1;
+  --accent:#0B5D6B;
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --gutter:9rem;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1.125rem;line-height:1.6;-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;background:var(--paper);padding:.5rem .75rem}
+.page{max-width:62rem;margin:0 auto;padding:0 2rem}
+.row{display:grid;grid-template-columns:var(--gutter) minmax(0,44rem);column-gap:2rem}
+.row>.main{grid-column:2}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-  /* Top bar */
-  .bar{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:28px 0}
-  .bar .me{font-family:var(--serif);font-size:20px;font-weight:600;text-decoration:none}
-  .bar nav{display:flex;gap:28px;font-size:15px}
-  .bar nav a{text-decoration:none;color:var(--muted)}
-  .bar nav a:hover{color:var(--ink)}
+/* Top */
+.top{padding:2.5rem 0 0}
+.bar{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;grid-column:2}
+.name{font-weight:600;font-size:1.75rem;line-height:1.2;letter-spacing:-.01em;margin:0}
+.nav{font-family:var(--sans);font-size:.9375rem;display:flex;gap:1.5rem}
+.nav a{text-decoration:none;color:var(--meta)}
+.nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.bio{grid-column:2;font-size:1.3125rem;line-height:1.5;margin:1.25rem 0 0;max-width:36em}
+.reach{grid-column:2;font-family:var(--sans);font-size:.9375rem;color:var(--meta);margin:1rem 0 0;display:flex;flex-wrap:wrap;gap:.25rem 1.5rem}
+.reach a{color:var(--ink);text-decoration-color:var(--rule);text-underline-offset:4px;text-decoration-thickness:1.5px}
+.reach a:hover{text-decoration-color:var(--accent);color:var(--accent)}
 
-  /* Hero: the clippings */
-  .hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;padding:56px 0 72px;align-items:start}
-  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,6vw,76px);line-height:1.02;letter-spacing:-.015em;margin:0 0 24px}
-  .hero .intro{font-size:19px;color:var(--muted);max-width:30em;margin:0 0 32px}
-  .hero .intro strong{color:var(--ink);font-weight:500}
-  .actions{display:flex;flex-wrap:wrap;gap:12px}
-  .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;padding:12px 20px;border-radius:999px;border:1.5px solid var(--ink)}
-  .btn.primary{background:var(--ink);color:var(--paper)}
-  .btn.primary:hover{background:var(--pencil);border-color:var(--pencil);color:#fff}
-  .btn.ghost:hover{border-color:var(--pencil);color:var(--pencil)}
+/* Clips: the headlines are the page */
+.clips{padding:3.5rem 0 1rem}
+.year{margin:0 0 3rem}
+.year h3{grid-column:1;margin:0;font-weight:400;font-size:1.0625rem;color:var(--meta);font-variant-numeric:tabular-nums;padding-top:.45rem;text-align:right}
+.year ol{grid-column:2;list-style:none;margin:0;padding:0}
+.year li+li{margin-top:1.75rem}
+.hl{font-size:1.625rem;line-height:1.22;font-weight:500;letter-spacing:-.012em;text-decoration:none;display:inline}
+.hl:hover{color:var(--accent);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.src{font-family:var(--sans);font-size:.9375rem;line-height:1.5;color:var(--meta);margin:.45rem 0 0;max-width:38em}
+.src a{color:var(--meta);text-underline-offset:3px}
+.src a:hover{color:var(--accent)}
 
-  .clips{list-style:none;margin:0;padding:0;border-left:3px solid var(--pencil)}
-  .clips li{padding:0 0 22px 28px}
-  .clips li:last-child{padding-bottom:0}
-  .clips a{text-decoration:none;display:block}
-  .clips .hl{font-family:var(--serif);font-size:clamp(22px,2.3vw,30px);line-height:1.18;font-weight:500;letter-spacing:-.005em;
-    background-image:linear-gradient(var(--pencil-tint),var(--pencil-tint));background-size:0 42%;background-position:0 88%;background-repeat:no-repeat;transition:background-size .35s ease}
-  .clips a:hover .hl,.clips a:focus-visible .hl{background-size:100% 42%}
-  .clips .src{display:block;font-size:14px;color:var(--muted);margin-top:6px}
-  @media (prefers-reduced-motion:no-preference){
-    .clips li{opacity:0;transform:translateY(6px);animation:in .5s ease forwards}
-    .clips li:nth-child(1){animation-delay:.05s}.clips li:nth-child(2){animation-delay:.15s}.clips li:nth-child(3){animation-delay:.25s}.clips li:nth-child(4){animation-delay:.35s}.clips li:nth-child(5){animation-delay:.45s}
-    @keyframes in{to{opacity:1;transform:none}}
-  }
+/* Sections after the clips */
+.sec{padding:3rem 0 0;border-top:1px solid var(--rule);margin-top:2rem}
+.sec h2{grid-column:2;font-weight:600;font-size:1.5rem;line-height:1.25;margin:0 0 1.75rem;letter-spacing:-.01em}
+.jobs{grid-column:1 / -1;list-style:none;margin:0;padding:0}
+.job{margin-bottom:2rem}
+.job .when{grid-column:1;font-family:var(--sans);font-size:.875rem;color:var(--meta);text-align:right;padding-top:.3rem;font-variant-numeric:tabular-nums}
+.job .what{grid-column:2}
+.job h3{margin:0;font-size:1.25rem;font-weight:600;line-height:1.3}
+.job .role{font-family:var(--sans);font-size:.9375rem;color:var(--meta);margin:.15rem 0 .5rem}
+.job p{margin:0}
+.job .more{font-family:var(--sans);font-size:.9375rem;margin-top:.5rem;display:inline-block;color:var(--accent);text-underline-offset:3px}
 
-  /* Record strip */
-  .record{background:var(--sheet);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-  .record .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding-top:36px;padding-bottom:36px}
-  .record p{margin:0;font-size:16px;color:var(--muted);max-width:22em}
-  .record b{display:block;font-family:var(--serif);font-weight:500;font-size:28px;line-height:1.15;color:var(--ink);margin-bottom:6px}
+.lead{grid-column:2;margin:-.75rem 0 1.75rem;max-width:36em}
+.videos{grid-column:2;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 1.5rem;margin:0;padding:0;list-style:none}
+.videos a{text-decoration:none;display:block}
+.videos img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:var(--rule);border-radius:3px}
+.videos h3{font-size:1.125rem;font-weight:600;line-height:1.3;margin:.75rem 0 .25rem}
+.videos a:hover h3{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.videos p{font-family:var(--sans);font-size:.9375rem;line-height:1.5;color:var(--meta);margin:0}
+.aside{grid-column:2;font-family:var(--sans);font-size:.9375rem;color:var(--meta);margin:1.75rem 0 0;max-width:38em}
 
-  /* Sections */
-  section.block{padding:88px 0 0}
-  .split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:64px}
-  .intro-row{margin-bottom:40px}
-  .intro-row p{margin:6px 0 0;color:var(--muted);max-width:34em}
+.about{grid-column:2}
+.about p{margin:0 0 1rem;max-width:36em}
+.facts{display:grid;grid-template-columns:7rem 1fr;gap:.6rem 1.25rem;margin:1.5rem 0 0;font-family:var(--sans);font-size:.9375rem;line-height:1.5}
+.facts dt{color:var(--meta)}
+.facts dd{margin:0}
 
-  /* Selected work */
-  .shelf{padding:28px 0;border-top:1px solid var(--rule)}
-  .shelf h3{font-family:var(--sans);font-size:16px;font-weight:600;margin:4px 0 0}
-  .shelf h3 small{display:block;font-weight:400;color:var(--muted);font-size:15px;margin-top:4px;max-width:18em}
-  .work{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}
-  .work a{text-decoration:none;display:block}
-  .work .hl{font-family:var(--serif);font-size:21px;line-height:1.25;font-weight:500;display:block}
-  .work a:hover .hl,.work a:focus-visible .hl{color:var(--pencil);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}
-  .work .src{display:block;font-size:14px;color:var(--muted);margin-top:6px}
-  .work .why{display:block;font-size:15px;color:var(--ink);opacity:.82;margin-top:6px;line-height:1.5}
+.contact{grid-column:2;padding-bottom:4rem}
+.contact p{margin:0 0 1rem;max-width:36em}
+.mail{font-size:1.625rem;font-weight:500;letter-spacing:-.01em;text-underline-offset:6px;text-decoration-thickness:2px;text-decoration-color:var(--accent)}
+.mail:hover{color:var(--accent)}
+.contact .small{font-family:var(--sans);font-size:.9375rem;color:var(--meta);margin-top:1.25rem}
+.contact .small a{color:var(--ink);text-underline-offset:3px}
+footer{font-family:var(--sans);font-size:.8125rem;color:var(--meta);padding:1.5rem 0 2.5rem;border-top:1px solid var(--rule)}
 
-  .archive-cta{margin-top:32px;padding-top:28px;border-top:1px solid var(--rule)}
-  .archive-cta p{margin:0;font-family:var(--serif);font-size:24px;line-height:1.25;max-width:24em}
-  .archive-cta a{display:inline-block;background:var(--pencil);color:#fff;text-decoration:none;font-weight:600;padding:13px 24px;border-radius:999px}
-  .archive-cta a:hover{background:var(--ink);color:var(--paper)}
-  .archive-cta a:focus-visible{outline-color:#fff}
-
-  /* Career timeline */
-  .timeline{list-style:none;margin:0;padding:0}
-  .timeline li{padding:24px 0;border-top:1px solid var(--rule)}
-  .timeline .when{color:var(--muted);font-size:15px;padding-top:3px}
-  .timeline h3{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.2;margin:0}
-  .timeline .role{color:var(--muted);font-size:15px;margin:2px 0 8px}
-  .timeline p{margin:0;max-width:38em}
-  .timeline .more{display:inline-block;margin-top:8px;font-size:15px;color:var(--pencil);text-underline-offset:3px}
-
-  /* Video */
-  .reels{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-  .reels a{display:block;text-decoration:none;background:var(--sheet);border:1px solid var(--rule);border-radius:12px;padding:20px 22px;height:100%}
-  .reels a:hover{border-color:var(--pencil)}
-  .reels .hl{font-family:var(--serif);font-size:20px;font-weight:500;line-height:1.25;display:block}
-  .reels .what{display:block;color:var(--muted);font-size:15px;margin-top:6px}
-  .reels .play{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:14px;font-weight:600;color:var(--pencil)}
-  .reels .play svg{width:18px;height:18px}
-  .aside{color:var(--muted);font-size:15px;margin:20px 0 0;max-width:44em}
-
-  /* About */
-  .about-text p{margin:0 0 18px;max-width:38em}
-  .facts{margin:8px 0 0;display:grid;grid-template-columns:auto 1fr;gap:12px 20px;font-size:15px;background:var(--sheet);border:1px solid var(--rule);border-radius:12px;padding:22px 24px}
-  .facts dt{color:var(--muted)}
-  .facts dd{margin:0}
-
-  /* Contact */
-  footer{margin-top:96px;background:#16181D;color:#F4F6F8}
-  footer .wrap{padding-top:72px;padding-bottom:40px}
-  footer h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5vw,56px);line-height:1.05;margin:0 0 16px;max-width:14em}
-  footer .note{color:#B8BEC8;max-width:36em;margin:0 0 32px}
-  footer .mail{font-family:var(--serif);font-size:clamp(24px,3.4vw,38px);text-decoration:none;border-bottom:2px solid #8CA4FF;color:#fff;word-break:break-word}
-  footer .mail:hover{color:#8CA4FF}
-  footer .lines{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:28px;color:#B8BEC8;font-size:15px}
-  footer .lines a{color:#fff}
-  footer a:focus-visible{outline-color:#8CA4FF}
-  footer .small{margin:56px 0 0;padding-top:20px;border-top:1px solid #2C3038;font-size:13px;color:#8D94A0}
-  @media (prefers-color-scheme:dark){footer{background:#0B0C0E}}
-
-  /* Tablet */
-  @media (max-width:900px){
-    .hero{grid-template-columns:1fr;gap:48px;padding:32px 0 56px}
-    .split{grid-template-columns:1fr;gap:14px}
-    .intro-row{margin-bottom:24px}
-    section.block{padding-top:64px}
-  }
-  /* Phone */
-  @media (max-width:600px){
-    body{font-size:16px}
-    .wrap{padding:0 18px}
-    .bar{padding:20px 0}
-    .bar nav{gap:18px;font-size:14px}
-    .bar nav .hide-s{display:none}
-    .hero .intro{font-size:17px}
-    .clips li{padding-left:20px;padding-bottom:18px}
-    .record .wrap{grid-template-columns:1fr;gap:20px;padding-top:28px;padding-bottom:28px}
-    .record b{font-size:24px}
-    .work{grid-template-columns:1fr;gap:22px}
-    .work .hl{font-size:19px}
-    .reels{grid-template-columns:1fr}
-    .facts{padding:18px;grid-template-columns:1fr;gap:4px}
-    .facts dd{margin-bottom:10px}
-    footer{margin-top:72px}
-    footer .wrap{padding-top:56px}
-  }
+@media (max-width:760px){
+  :root{--gutter:0}
+  .page{padding:0 1.25rem}
+  .row{display:block}
+  .bar{display:flex}
+  .top{padding-top:1.5rem}
+  .bio{font-size:1.1875rem;margin-top:1rem}
+  .clips{padding-top:2.5rem}
+  .year{margin-bottom:2.5rem}
+  .year h3{text-align:left;padding:0 0 .75rem;font-family:var(--sans);font-size:.875rem}
+  .hl{font-size:1.3125rem;line-height:1.25}
+  .year li+li{margin-top:1.4rem}
+  .job .when{text-align:left;padding:0 0 .2rem}
+  .videos{grid-template-columns:1fr;gap:1.75rem}
+  .facts{grid-template-columns:6rem 1fr}
+  .mail{font-size:1.3125rem;word-break:break-word}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<a class="skip" href="#work">Skip to selected work</a>
+<a class="skip" href="#clips">Skip to stories</a>
+<div class="page">
 
-<div class="wrap">
-  <header class="bar">
-    <a class="me" href="#top" id="top">Moulik Mathur</a>
-    <nav aria-label="Main">
-      <a href="#work">Work</a>
+<header class="top row">
+  <div class="bar">
+    <h1 class="name">Moulik Mathur</h1>
+    <nav class="nav" aria-label="Site">
       <a href="archive.html">Archive</a>
-      <a href="#career" class="hide-s">Career</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
+  <p class="bio">I'm a journalist in London. I've spent four years writing news, reviews and interviews for IGN India, India Today Gaming, Destructoid and How-To Geek. During my MA at Sheffield, I reported on housing and local life in the city.</p>
+  <p class="reach">
+    <a href="mailto:moulikmathur@gmail.com">moulikmathur@gmail.com</a>
+    <a href="tel:+447917973873">+44 7917 973 873</a>
+    <a href="archive.html">All 371 articles</a>
+  </p>
+</header>
 
-  <section class="hero" aria-labelledby="hero-title">
-    <div>
-      <h1 id="hero-title">Journalist in London.</h1>
-      <p class="intro">I'm <strong>Moulik</strong>, a journalist based in London. I've spent four years writing news, reviews and interviews for IGN India, India Today Gaming, Destructoid and How-To Geek. During my MA at Sheffield, I reported on housing and local life in the city.</p>
-      <div class="actions">
-        <a class="btn primary" href="mailto:moulikmathur@gmail.com">Email me</a>
-        <a class="btn ghost" href="archive.html">Browse all 371 articles</a>
-      </div>
-    </div>
-    <ol class="clips" aria-label="A few of my headlines">
-      <li><a href="https://sheffieldwire.co.uk/index.php/2025/05/14/city-councils-bill-revealed-for-housing-sheffields-vulnerable-people/" target="_blank" rel="noopener"><span class="hl">City council's bill revealed for housing Sheffield's vulnerable people</span><span class="src">Sheffield Wire, May 2025. FOI investigation</span></a></li>
-      <li><a href="https://in.ign.com/apex-legends/190904/news/apex-legends-developer-teases-laid-out-storylines-in-future-but-rules-out-campaign-mode-in-the-battl" target="_blank" rel="noopener"><span class="hl">Apex Legends dev teases storylines for future but rules out campaign</span><span class="src">IGN India. Exclusive interview with Respawn</span></a></li>
-      <li><a href="https://in.ign.com/tekken-8/200944/review/tekken-8-review" target="_blank" rel="noopener"><span class="hl">Tekken 8 review: back to the basics of fun</span><span class="src">IGN India. Review</span></a></li>
-      <li><a href="https://uosjournalism.shorthandstories.com/industrys-take-on-ai-in-video-games-impact-on-jobs-rise-of-smaller-studios-and-future-of-gaming/index.html" target="_blank" rel="noopener"><span class="hl">Industry's take on AI in video games: jobs, smaller studios and the future of gaming</span><span class="src">University of Sheffield, 2025. Multimedia feature</span></a></li>
-      <li><a href="https://www.mirror.co.uk/news/uk-news/premature-baby-hands-size-fingertips-35172580" target="_blank" rel="noopener"><span class="hl">A baby born 15 weeks early on her mum's own neonatal ward</span><span class="src">The Mirror, May 2025. Written on placement at SWNS</span></a></li>
+<main id="clips" class="clips">
+  <h2 class="sr">Selected stories, newest first</h2>
+
+  <section class="year row" aria-labelledby="y2025">
+    <h3 id="y2025">2025</h3>
+    <ol>
+      <li>
+        <a class="hl" href="https://sheffieldwire.co.uk/index.php/2025/05/14/city-councils-bill-revealed-for-housing-sheffields-vulnerable-people/">City council's bill revealed for housing Sheffield's vulnerable people</a>
+        <p class="src">Sheffield Wire. My FOI request showed the council spent nearly £135m on exempt accommodation over five years. The follow-up: <a href="https://sheffieldwire.co.uk/index.php/2025/05/16/there-was-nowhere-else-for-me-teenager-on-social-housings-role-to-lift-him-from-homelessness/">a 19-year-old who fled Yemen on how social housing got him off the streets</a>.</p>
+      </li>
+      <li>
+        <a class="hl" href="https://www.mirror.co.uk/news/uk-news/premature-baby-hands-size-fingertips-35172580">A baby born 15 weeks early on her mum's own neonatal ward</a>
+        <p class="src">The Mirror. Written during a placement at the news agency SWNS.</p>
+      </li>
+      <li>
+        <a class="hl" href="https://uosjournalism.shorthandstories.com/industrys-take-on-ai-in-video-games-impact-on-jobs-rise-of-smaller-studios-and-future-of-gaming/index.html">Industry's take on AI in video games: jobs, smaller studios and the future of gaming</a>
+        <p class="src">University of Sheffield, multimedia feature. Interviews with Scriptic's Thomas Wood and Ten24's James Busby.</p>
+      </li>
+      <li>
+        <a class="hl" href="https://sheffieldwire.co.uk/index.php/2025/03/17/people-want-action-from-policy-makers-regarding-climate-change/">"Concerned but feel powerless": Sheffield people want action from policy makers on climate change</a>
+        <p class="src">Sheffield Wire, long read.</p>
+      </li>
     </ol>
   </section>
-</div>
 
-<div class="record">
-  <div class="wrap">
-    <p><b>1,500+ articles</b>Daily news, reviews, guides, features and interviews across five outlets.</p>
-    <p><b>2,600 to 100,000</b>Monthly views at India Today Gaming while I ran its editorial side for seven months.</p>
-    <p><b>MA Journalism</b>University of Sheffield, ranked first in the UK for journalism by the Guardian.</p>
-  </div>
-</div>
-
-<main id="work">
-  <section class="block" aria-labelledby="work-title">
-    <div class="wrap">
-      <div class="intro-row">
-        <h2 class="title" id="work-title">Selected work</h2>
-      </div>
-
-      <div class="shelf split">
-        <h3>News and investigations</h3>
-        <ul class="work">
-          <li><a href="https://sheffieldwire.co.uk/index.php/2025/05/14/city-councils-bill-revealed-for-housing-sheffields-vulnerable-people/" target="_blank" rel="noopener"><span class="hl">City council's bill revealed for housing Sheffield's vulnerable people</span><span class="src">Sheffield Wire, May 2025</span><span class="why">An FOI request showed the council spent nearly £135m on exempt accommodation over five years.</span></a></li>
-          <li><a href="https://sheffieldwire.co.uk/index.php/2025/05/16/there-was-nowhere-else-for-me-teenager-on-social-housings-role-to-lift-him-from-homelessness/" target="_blank" rel="noopener"><span class="hl">"There was nowhere else for me": Teenager on social housing's role to lift him from homelessness</span><span class="src">Sheffield Wire, May 2025</span><span class="why">The human side of the FOI story, told by a 19-year-old who fled Yemen.</span></a></li>
-          <li><a href="https://www.mirror.co.uk/news/uk-news/premature-baby-hands-size-fingertips-35172580" target="_blank" rel="noopener"><span class="hl">A baby born 15 weeks early on her mum's own neonatal ward</span><span class="src">The Mirror, May 2025</span><span class="why">Written during a placement at news agency SWNS and picked up by the Mirror.</span></a></li>
-          <li><a href="https://in.ign.com/policy/189943/news/indian-video-games-industry-rallies-together-as-over-40-studios-ask-government-to-separate-games-fro" target="_blank" rel="noopener"><span class="hl">Indian video games industry rallies together as over 40 studios ask government to separate games from gambling apps</span><span class="src">IGN India</span></a></li>
-        </ul>
-      </div>
-
-      <div class="shelf split">
-        <h3>Interviews and exclusives</h3>
-        <ul class="work">
-          <li><a href="https://in.ign.com/apex-legends/190904/news/apex-legends-developer-teases-laid-out-storylines-in-future-but-rules-out-campaign-mode-in-the-battl" target="_blank" rel="noopener"><span class="hl">Apex Legends dev teases storylines for future but rules out campaign</span><span class="src">IGN India</span></a></li>
-          <li><a href="https://www.indiatodaygaming.com/news/international/story/apex-legends-design-director-confirms-heirlooms-for-newer-characters-are-in-development-exclusive-2178" target="_blank" rel="noopener"><span class="hl">Apex Legends design director confirms heirlooms for newer characters are in development</span><span class="src">India Today Gaming, February 2023</span></a></li>
-          <li><a href="https://in.ign.com/ea-fc-mobile/191017/news/ea-fc-mobile-producer-timo-mueller-on-first-time-gameplay-experience-optimisations-and-anticipated-r" target="_blank" rel="noopener"><span class="hl">EA FC Mobile producer Timo Mueller on first-time gameplay, optimisations and the reaction to changes</span><span class="src">IGN India</span></a></li>
-          <li><a href="https://in.ign.com/esports/198528/interview/nba-2k-the-business-head-of-india-shares-how-the-company-plans-to-grow-the-popularity-of-its-esports" target="_blank" rel="noopener"><span class="hl">NBA 2K: the business head of India on growing its esports league</span><span class="src">IGN India</span></a></li>
-          <li><a href="https://sheffieldwire.co.uk/index.php/2024/12/06/mexican-developer-reflects-on-gaming-journey-claims-sheffields-video-game-culture-is-hardly-evident/" target="_blank" rel="noopener"><span class="hl">Mexican developer reflects on gaming journey, claims Sheffield's video game culture is hardly "evident"</span><span class="src">Sheffield Wire, December 2024</span></a></li>
-          <li><a href="https://uosjournalism.shorthandstories.com/industrys-take-on-ai-in-video-games-impact-on-jobs-rise-of-smaller-studios-and-future-of-gaming/index.html" target="_blank" rel="noopener"><span class="hl">Industry's take on AI in video games: impact on jobs, rise of smaller studios and the future of gaming</span><span class="src">University of Sheffield, 2025</span><span class="why">Interviews with Scriptic's Thomas Wood and Ten24's James Busby.</span></a></li>
-        </ul>
-      </div>
-
-      <div class="shelf split">
-        <h3>Reviews</h3>
-        <ul class="work">
-          <li><a href="https://in.ign.com/tekken-8/200944/review/tekken-8-review" target="_blank" rel="noopener"><span class="hl">Tekken 8 review: back to the basics of fun</span><span class="src">IGN India</span></a></li>
-          <li><a href="https://in.ign.com/cyberpunk-2077-phantom-liberty/194528/review/cyberpunk-2077-phantom-liberty-ign-india-review" target="_blank" rel="noopener"><span class="hl">Cyberpunk 2077: Phantom Liberty review</span><span class="src">IGN India</span></a></li>
-          <li><a href="https://www.indiatodaygaming.com/news/international/story/returnal-review-2310" target="_blank" rel="noopener"><span class="hl">Returnal review: a fantastic roguelike with top-notch storytelling</span><span class="src">India Today Gaming, March 2023</span></a></li>
-          <li><a href="https://in.ign.com/lenovo-legion-slim-5i/191181/review/lenovo-legion-slim-5i-review" target="_blank" rel="noopener"><span class="hl">Lenovo Legion Slim 5i review</span><span class="src">IGN India</span></a></li>
-        </ul>
-      </div>
-
-      <div class="shelf split">
-        <h3>Features and guides</h3>
-        <ul class="work">
-          <li><a href="https://sheffieldwire.co.uk/index.php/2025/03/17/people-want-action-from-policy-makers-regarding-climate-change/" target="_blank" rel="noopener"><span class="hl">"Concerned but feel powerless": Sheffield people want action from policy makers on climate change</span><span class="src">Sheffield Wire, March 2025</span></a></li>
-          <li><a href="https://sheffieldwire.co.uk/index.php/2025/03/24/makers-market-2025-sheffields-independent-artisans-reflect-on-demoralising-reality-of-the-market/" target="_blank" rel="noopener"><span class="hl">Makers' Market 2025: Sheffield's independent artisans reflect on the "demoralising" reality of the market</span><span class="src">Sheffield Wire, March 2025</span></a></li>
-          <li><a href="https://www.destructoid.com/every-apex-legends-season-start-and-end-date/" target="_blank" rel="noopener"><span class="hl">Every Apex Legends season start and end date</span><span class="src">Destructoid</span></a></li>
-          <li><a href="https://www.destructoid.com/no-mans-sky-how-to-get-a-sentinel-interceptor/" target="_blank" rel="noopener"><span class="hl">No Man's Sky: how to get a Sentinel Interceptor</span><span class="src">Destructoid, 2024</span></a></li>
-        </ul>
-      </div>
-
-      <div class="archive-cta">
-        <a href="archive.html">See all 371 articles</a>
-      </div>
-    </div>
+  <section class="year row" aria-labelledby="y2024">
+    <h3 id="y2024">2024</h3>
+    <ol>
+      <li>
+        <a class="hl" href="https://sheffieldwire.co.uk/index.php/2024/12/06/mexican-developer-reflects-on-gaming-journey-claims-sheffields-video-game-culture-is-hardly-evident/">Mexican developer reflects on gaming journey, claims Sheffield's video game culture is hardly "evident"</a>
+        <p class="src">Sheffield Wire, interview.</p>
+      </li>
+      <li>
+        <a class="hl" href="https://www.destructoid.com/no-mans-sky-how-to-get-a-sentinel-interceptor/">No Man's Sky: how to get a Sentinel Interceptor</a>
+        <p class="src">Destructoid. One of 29 No Man's Sky guides and news stories I wrote that summer.</p>
+      </li>
+      <li>
+        <a class="hl" href="https://in.ign.com/tekken-8/200944/review/tekken-8-review">Tekken 8 review: back to the basics of fun</a>
+        <p class="src">IGN India, review.</p>
+      </li>
+    </ol>
   </section>
 
-  <section class="block" id="career" aria-labelledby="career-title">
-    <div class="wrap">
-      <div class="intro-row">
-        <h2 class="title" id="career-title">Where I've worked</h2>
-      </div>
-      <ol class="timeline">
-        <li class="split">
-          <div class="when">March to July 2026</div>
-          <div>
-            <h3>How-To Geek</h3>
-            <p class="role">Freelance writer, remote</p>
-            <p>About 15 to 20 articles a month, mostly my own pitches, explaining software, hardware and consumer tech in plain language.</p>
-            <a class="more" href="https://www.howtogeek.com/author/moulik-mathur/" target="_blank" rel="noopener">My How-To Geek articles</a>
-          </div>
-        </li>
-        <li class="split">
-          <div class="when">November 2024 to May 2025</div>
-          <div>
-            <h3>Sheffield Wire and SWNS</h3>
-            <p class="role">Reporter, MA newsroom, University of Sheffield</p>
-            <p>Thirteen stories across news, sport, features and video, including the FOI housing investigation. A placement at news agency SWNS produced a story the Mirror ran.</p>
-            <a class="more" href="https://sheffieldwire.co.uk/index.php/author/joq24mm/" target="_blank" rel="noopener">My Sheffield Wire stories</a>
-          </div>
-        </li>
-        <li class="split">
-          <div class="when">June to September 2024</div>
-          <div>
-            <h3>Destructoid</h3>
-            <p class="role">Staff writer, remote</p>
-            <p>194 articles in four months, mostly my own pitches: news on studios like CD Projekt Red and Remedy, and search-led guides for No Man's Sky, EA FC 25 and Pokémon Go.</p>
-            <a class="more" href="https://www.destructoid.com/author/moulik-mathur/" target="_blank" rel="noopener">My Destructoid articles</a>
-          </div>
-        </li>
-        <li class="split">
-          <div class="when">March 2023 to June 2024</div>
-          <div>
-            <h3>IGN India</h3>
-            <p class="role">Staff writer, Gurugram</p>
-            <p>About 1,200 articles: news, reviews of games, films and gaming laptops, interviews, and on-the-ground reporting from esports events.</p>
-            <a class="more" href="https://in.ign.com/u/moulik-mathur" target="_blank" rel="noopener">My IGN India articles</a>
-          </div>
-        </li>
-        <li class="split">
-          <div class="when">March 2022 to March 2023</div>
-          <div>
-            <h3>India Today Gaming</h3>
-            <p class="role">Sub-editor, Noida, India Today Group</p>
-            <p>After the editor left, I ran the editorial side for about seven months with a team of two writers, and grew traffic from about 2,600 to 100,000 monthly views by choosing stories with Google Analytics and Google Trends every morning.</p>
-            <a class="more" href="https://www.indiatodaygaming.com/author/moulik-mathur" target="_blank" rel="noopener">My India Today Gaming articles</a>
-          </div>
-        </li>
-        <li class="split">
-          <div class="when">August 2021 to March 2022</div>
-          <div>
-            <h3>Newzera</h3>
-            <p class="role">News curator, Indore</p>
-            <p>Researched, wrote, proofread and published stories on sport, tech, politics and world news.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
+  <section class="year row" aria-labelledby="y2023">
+    <h3 id="y2023">2023</h3>
+    <ol>
+      <li>
+        <a class="hl" href="https://in.ign.com/esports/198528/interview/nba-2k-the-business-head-of-india-shares-how-the-company-plans-to-grow-the-popularity-of-its-esports">NBA 2K: the business head of India on growing its esports league</a>
+        <p class="src">IGN India, interview.</p>
+      </li>
+      <li>
+        <a class="hl" href="https://in.ign.com/cyberpunk-2077-phantom-liberty/194528/review/cyberpunk-2077-phantom-liberty-ign-india-review">Cyberpunk 2077: Phantom Liberty review</a>
+        <p class="src">IGN India, review.</p>
+      </li>
+      <li>
+        <a class="hl" href="https://in.ign.com/lenovo-legion-slim-5i/191181/review/lenovo-legion-slim-5i-review">Lenovo Legion Slim 5i review</a>
+        <p class="src">IGN India, laptop review.</p>
+      </li>
+      <li>
+        <a class="hl" href="https://in.ign.com/ea-fc-mobile/191017/news/ea-fc-mobile-producer-timo-mueller-on-first-time-gameplay-experience-optimisations-and-anticipated-r">EA FC Mobile producer Timo Mueller on first-time gameplay, optimisations and the reaction to changes</a>
+        <p class="src">IGN India, interview.</p>
+      </li>
+      <li>
+        <a class="hl" href="https://in.ign.com/apex-legends/190904/news/apex-legends-developer-teases-laid-out-storylines-in-future-but-rules-out-campaign-mode-in-the-battl">Apex Legends dev teases storylines for future but rules out campaign</a>
+        <p class="src">IGN India. Exclusive interview with Respawn.</p>
+      </li>
+      <li>
+        <a class="hl" href="https://in.ign.com/policy/189943/news/indian-video-games-industry-rallies-together-as-over-40-studios-ask-government-to-separate-games-fro">Indian video games industry rallies together as over 40 studios ask government to separate games from gambling apps</a>
+        <p class="src">IGN India, news.</p>
+      </li>
+      <li>
+        <a class="hl" href="https://www.indiatodaygaming.com/news/international/story/returnal-review-2310">Returnal review: a fantastic roguelike with top-notch storytelling</a>
+        <p class="src">India Today Gaming, review.</p>
+      </li>
+      <li>
+        <a class="hl" href="https://www.indiatodaygaming.com/news/international/story/apex-legends-design-director-confirms-heirlooms-for-newer-characters-are-in-development-exclusive-2178">Apex Legends design director confirms heirlooms for newer characters are in development</a>
+        <p class="src">India Today Gaming. Exclusive interview with Respawn.</p>
+      </li>
+    </ol>
   </section>
 
-  <section class="block" id="video" aria-labelledby="video-title">
-    <div class="wrap">
-      <div class="intro-row">
-        <h2 class="title" id="video-title">Video</h2>
-        <p>I shoot, edit and voice my own videos in Premiere Pro.</p>
-      </div>
-      <ul class="reels">
-        <li><a href="https://www.youtube.com/watch?v=7zjbPX8flEk" target="_blank" rel="noopener"><span class="hl">The Sapiens Project by Ten24</span><span class="what">Filmed the interview, edited the piece and recorded the voice-over.</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</span></a></li>
-        <li><a href="https://www.youtube.com/watch?v=8aE28A1Cbx0" target="_blank" rel="noopener"><span class="hl">Ten24, cut for social</span><span class="what">Re-edited to a vertical 9:16 layout for social platforms.</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</span></a></li>
-        <li><a href="https://www.youtube.com/watch?v=5C23rnAGaTE" target="_blank" rel="noopener"><span class="hl">Interviewing a veteran referee at the Crucible</span><span class="what">Shot every frame and edited it; the voice-over is by the classmate who ran the interview.</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</span></a></li>
-        <li><a href="https://www.youtube.com/watch?v=9iP13LFEIB8" target="_blank" rel="noopener"><span class="hl">Catcalls of Sheffield, group project</span><span class="what">Edited the piece and added subtitles and a score to cover weak location audio.</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</span></a></li>
-      </ul>
-      <p class="aside">I also designed the pitch presentation for my final university project on video game preservation, using Canva, PixelLab and PicsArt.</p>
-    </div>
-  </section>
-
-  <section class="block" id="about" aria-labelledby="about-title">
-    <div class="wrap split">
-      <h2 class="title" id="about-title">About</h2>
-      <div>
-        <div class="about-text">
-          <p>I've worked in newsrooms for four years, mostly in games and tech. I've written daily news, reviewed games and laptops, interviewed developers, and edited other writers' copy.</p>
-          <p>I came to the UK for my MA in Journalism at the University of Sheffield. I'm now in London, looking for my next role in journalism or content.</p>
-        </div>
-        <dl class="facts">
-          <dt>Education</dt><dd>MA Journalism, University of Sheffield<br>PG Diploma in English Journalism, IIMC<br>BA English and Spanish, University of Delhi</dd>
-          <dt>Tools</dt><dd>WordPress and four newsroom CMSs, Google Analytics, Google Trends, Premiere Pro, Photoshop, InDesign, Canva</dd>
-          <dt>Languages</dt><dd>English and Hindi (fluent), Spanish (basic)</dd>
-        </dl>
-      </div>
-    </div>
-  </section>
+  <p class="row"><span class="src main"><a href="archive.html">See all 371 articles, searchable by game, outlet and type</a></span></p>
 </main>
 
-<footer id="contact">
-  <div class="wrap">
-    <h2>Get in touch</h2>
-    <p class="note">Open to content writing, copywriting, SEO content, sub-editing and B2B editorial roles. Based in London on a Graduate visa, able to work for any UK employer without sponsorship.</p>
-    <a class="mail" href="mailto:moulikmathur@gmail.com">moulikmathur@gmail.com</a>
-    <div class="lines">
-      <span>Phone <a href="tel:+447917973873">+44 7917 973 873</a></span>
-      <span>London, UK</span>
-      <span><a href="archive.html">Article archive</a></span>
-    </div>
-    <p class="small">© <span id="year">2026</span> Moulik Mathur</p>
+<section class="sec row" id="career" aria-labelledby="h-career">
+  <h2 id="h-career">Where I've worked</h2>
+  <ol class="jobs">
+    <li class="job row">
+      <div class="when">2026</div>
+      <div class="what">
+        <h3>How-To Geek</h3>
+        <p class="role">Freelance writer, remote</p>
+        <p>About 15 to 20 articles a month, mostly my own pitches, explaining software, hardware and consumer tech in plain language.</p>
+        <a class="more" href="https://www.howtogeek.com/author/moulik-mathur/">My How-To Geek articles</a>
+      </div>
+    </li>
+    <li class="job row">
+      <div class="when">2024–25</div>
+      <div class="what">
+        <h3>Sheffield Wire and SWNS</h3>
+        <p class="role">Reporter, MA newsroom, University of Sheffield</p>
+        <p>Thirteen stories across news, sport, features and video, including the FOI housing investigation. A placement at news agency SWNS produced a story the Mirror ran.</p>
+        <a class="more" href="https://sheffieldwire.co.uk/index.php/author/joq24mm/">My Sheffield Wire stories</a>
+      </div>
+    </li>
+    <li class="job row">
+      <div class="when">2024</div>
+      <div class="what">
+        <h3>Destructoid</h3>
+        <p class="role">Staff writer, remote</p>
+        <p>194 articles in four months, mostly my own pitches: news on studios like CD Projekt Red and Remedy, and search-led guides for No Man's Sky, EA FC 25 and Pokémon Go.</p>
+        <a class="more" href="https://www.destructoid.com/author/moulik-mathur/">My Destructoid articles</a>
+      </div>
+    </li>
+    <li class="job row">
+      <div class="when">2023–24</div>
+      <div class="what">
+        <h3>IGN India</h3>
+        <p class="role">Staff writer, Gurugram</p>
+        <p>About 1,200 articles: news, reviews of games, films and gaming laptops, interviews, and on-the-ground reporting from esports events.</p>
+        <a class="more" href="https://in.ign.com/u/moulik-mathur">My IGN India articles</a>
+      </div>
+    </li>
+    <li class="job row">
+      <div class="when">2022–23</div>
+      <div class="what">
+        <h3>India Today Gaming</h3>
+        <p class="role">Sub-editor, Noida, India Today Group</p>
+        <p>After the editor left, I ran the editorial side for about seven months with a team of two writers, and grew traffic from about 2,600 to 100,000 monthly views by choosing stories with Google Analytics and Google Trends every morning.</p>
+        <a class="more" href="https://www.indiatodaygaming.com/author/moulik-mathur">My India Today Gaming articles</a>
+      </div>
+    </li>
+    <li class="job row">
+      <div class="when">2021–22</div>
+      <div class="what">
+        <h3>Newzera</h3>
+        <p class="role">News curator, Indore</p>
+        <p>Researched, wrote, proofread and published stories on sport, tech, politics and world news.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="sec row" id="video" aria-labelledby="h-video">
+  <h2 id="h-video">Video</h2>
+  <p class="lead">I shoot, edit and voice my own videos in Premiere Pro.</p>
+  <ul class="videos">
+    <li><a href="https://www.youtube.com/watch?v=7zjbPX8flEk">
+      <img src="https://i.ytimg.com/vi/7zjbPX8flEk/hqdefault.jpg" alt="" loading="lazy" width="480" height="270">
+      <h3>The Sapiens Project by Ten24</h3>
+      <p>Filmed the interview, edited the piece and recorded the voice-over.</p>
+    </a></li>
+    <li><a href="https://www.youtube.com/watch?v=8aE28A1Cbx0">
+      <img src="https://i.ytimg.com/vi/8aE28A1Cbx0/hqdefault.jpg" alt="" loading="lazy" width="480" height="270">
+      <h3>Ten24, cut for social</h3>
+      <p>Re-edited to a vertical 9:16 layout for social platforms.</p>
+    </a></li>
+    <li><a href="https://www.youtube.com/watch?v=5C23rnAGaTE">
+      <img src="https://i.ytimg.com/vi/5C23rnAGaTE/hqdefault.jpg" alt="" loading="lazy" width="480" height="270">
+      <h3>Interviewing a veteran referee at the Crucible</h3>
+      <p>Shot every frame and edited it; the voice-over is by the classmate who ran the interview.</p>
+    </a></li>
+    <li><a href="https://www.youtube.com/watch?v=9iP13LFEIB8">
+      <img src="https://i.ytimg.com/vi/9iP13LFEIB8/hqdefault.jpg" alt="" loading="lazy" width="480" height="270">
+      <h3>Catcalls of Sheffield, group project</h3>
+      <p>Edited the piece and added subtitles and a score to cover weak location audio.</p>
+    </a></li>
+  </ul>
+  <p class="aside">I also designed the pitch presentation for my final university project on video game preservation, using Canva, PixelLab and PicsArt.</p>
+</section>
+
+<section class="sec row" id="about" aria-labelledby="h-about">
+  <h2 id="h-about">About</h2>
+  <div class="about">
+    <p>I've worked in newsrooms for four years, mostly in games and tech. I've written daily news, reviewed games and laptops, interviewed developers, and edited other writers' copy.</p>
+    <p>I came to the UK for my MA in Journalism at the University of Sheffield. I'm now in London, looking for my next role in journalism or content.</p>
+    <dl class="facts">
+      <dt>Education</dt>
+      <dd>MA Journalism, University of Sheffield<br>PG Diploma in English Journalism, IIMC<br>BA English and Spanish, University of Delhi</dd>
+      <dt>Tools</dt>
+      <dd>WordPress and four newsroom CMSs, Google Analytics, Google Trends, Premiere Pro, Photoshop, InDesign, Canva</dd>
+      <dt>Languages</dt>
+      <dd>English and Hindi (fluent), Spanish (basic)</dd>
+    </dl>
   </div>
-</footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</section>
+
+<section class="sec row" id="contact" aria-labelledby="h-contact">
+  <h2 id="h-contact">Contact</h2>
+  <div class="contact">
+    <p>Open to content writing, copywriting, SEO content, sub-editing and B2B editorial roles. Based in London on a Graduate visa, able to work for any UK employer without sponsorship.</p>
+    <a class="mail" href="mailto:moulikmathur@gmail.com">moulikmathur@gmail.com</a>
+    <p class="small">Phone <a href="tel:+447917973873">+44 7917 973 873</a></p>
+  </div>
+</section>
+
+<footer class="row"><div class="main">© <span id="yr">2026</span> Moulik Mathur</div></footer>
+</div>
+<script>try{document.getElementById('yr').textContent=new Date().getFullYear()}catch(e){}</script>
 </body>
 </html>
